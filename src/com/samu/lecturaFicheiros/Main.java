@@ -16,10 +16,12 @@ public class Main {
                 " 1. Piedra, Papel y Tijera " + "\n" + " 2. Adivinanza " + "\n" + " 3. T-Rex ");
 
 
-        /*JOptionPane.showMessageDialog(null," Antes de eligir el juego con el que empezará debe introducir sus datos");
-        JOptionPane.showInputDialog(" Nombre y apellidos ");
-        JOptionPane.showInputDialog(" Género ");
-        JOptionPane.showInputDialog(" Edad ");*/
+        JOptionPane.showMessageDialog(null," Antes de eligir el juego con el que empezará debe introducir sus datos");
+        Jugador jugador = new Jugador();
+        jugador.setNombre_apellidos(JOptionPane.showInputDialog(" Nombre y apellidos "));
+        jugador.setGenero(JOptionPane.showInputDialog(" Género "));
+        jugador.setEdad(Integer.parseInt(JOptionPane.showInputDialog(" Edad ")));
+
 
         JOptionPane.showMessageDialog(null, " Ahora que sabe cual es cada juego, para iniciar el que usted desee," +
                 " lo único que debe hacer es teclear el número que corresponde con el juego que quiere jugar " + "\n"
@@ -35,7 +37,7 @@ public class Main {
             " la cuarta opción es para salir del juego " + "\n" + "\n" + " Opción 1" + "\n" + "Opción 2 " + "\n" + "Opción 3" + "\n" + "Opción 4");
 
 
-            opcion = Integer.parseInt(JOptionPane.showInputDialog(" Introduce la opción que desee"));
+            opcion = Integer.parseInt(JOptionPane.showInputDialog(" Introduce la opción que desee "));
 
 
             switch (opcion) {
